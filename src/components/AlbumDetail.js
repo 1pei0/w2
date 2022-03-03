@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 
 const AlbumDetail = (props) => {
-  const { title, artist, image } = props.album;
+  const { title, releasetime, image } = props.album;
   return (
     <View style={styles.container}>    
         <Image
@@ -14,7 +14,7 @@ const AlbumDetail = (props) => {
         <View style={styles.content}>
           <View style={styles.text}>
           <Text style={styles.title}>{title}</Text>
-          <Text style={styles.artist}>{artist}</Text>
+          <Text style={styles.releasetime}>{releasetime}</Text>
           </View>
         </View>
     </View>
@@ -48,15 +48,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 5,
     paddingTop: 10,
+    
   },
   title: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: '700',
     lineHeight: 30,
+    color:"#784C24",
   },
-  artist: {
-    fontSize: 14,
+  releasetime: {
+    fontSize: 15,
     fontWeight: '400',
+    color:"#784C24",
   },
 });
 
